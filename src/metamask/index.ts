@@ -7,6 +7,7 @@ import { getAllNotifications, installSnap, invokeSnap } from "../snap";
 import { getNotificationEmitter } from "../snap/getNotificationEmitter";
 import { acceptAddNetwork, rejectAddNetwork } from "./addNetwork";
 import { approve } from "./approve";
+import { confirmSpending } from "./confirmSpending";
 import { confirmTransaction } from "./confirmTransaction";
 import { deleteAccount, deleteNetwork, getTokenBalance } from "./helpers";
 import { importPk } from "./importPk";
@@ -43,6 +44,7 @@ export const getMetaMask = (page: DappeteerPage): Promise<Dappeteer> => {
       acceptAddNetwork: acceptAddNetwork(page),
       rejectAddNetwork: rejectAddNetwork(page),
       approve: approve(page),
+      confirmSpending: confirmSpending(page),
       confirmTransaction: confirmTransaction(page, getSingedIn),
       importPK: importPk(page),
       lock: lock(page, setSignedIn, getSingedIn),
