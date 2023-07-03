@@ -26,7 +26,7 @@ export const confirmTransaction =
       await page.reload();
       await waitForOverlay(page);
       await getElementByContent(page, "Edit", "button", {
-        timeout: 500,
+        timeout: 1000,
         visible: false,
       });
     }, 15);
