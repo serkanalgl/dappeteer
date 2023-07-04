@@ -72,7 +72,7 @@ export class DPlaywrightPage implements DappeteerPage<Page> {
   }
 
   async reload(): Promise<void> {
-    await this.page.reload({ waitUntil: "networkidle2" });
+    await this.page.reload({ waitUntil: "networkidle" });
   }
 
   setViewport(opts: { height: number; width: number }): Promise<void> {
