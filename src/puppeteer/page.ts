@@ -96,7 +96,7 @@ export class DPupeteerPage implements DappeteerPage<Page> {
   }
 
   async reload(): Promise<void> {
-    await this.page.reload({ waitUntil: "networkidle0" });
+    await this.page.reload({ waitUntil: "networkidle2" });
   }
 
   setViewport(opts: { height: number; width: number }): Promise<void> {

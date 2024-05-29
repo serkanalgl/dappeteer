@@ -1,3 +1,4 @@
+import { confirmSpending } from "./metamask/confirmSpending";
 import { MetaMaskInpageProvider } from "@metamask/providers";
 import type { LaunchOptions as PlaywrightLaunchOptions } from "playwright";
 import type { launch as puppeteerLaunch } from "puppeteer";
@@ -67,6 +68,7 @@ export type Dappeteer = {
   sign: () => Promise<void>;
   signTypedData: () => Promise<void>;
   approve: () => Promise<void>;
+  confirmSpending: () => Promise<void>;
   createAccount: (accountName: string) => Promise<void>;
   helpers: {
     getTokenBalance: (tokenSymbol: string) => Promise<number>;
